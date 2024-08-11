@@ -12,13 +12,23 @@
       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
       crossorigin="anonymous"
     />
-    <title> E-LIBRARY REGISTER 
-    </title>
+    <link rel="icon" href="ggu logo.webp">
+    <title> E-LIBRARY REGISTER </title>
+    <style>
+      body {
+          color: rgb(240, 103, 18); 
+          background-image: url('ggulib2.webp');
+      }
+
+     
+     
+      
+  </style>
   </head>
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Online Library</a>
+      <a class="navbar-brand" href="#">GURU GHASIDAS UNIVERSITY</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -31,14 +41,6 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-        </ul>
         <form class="form-inline my-2 my-lg-0">
           <input
             class="form-control mr-sm-2"
@@ -55,27 +57,34 @@
     <div id="alertuser"></div>
 
     <div class="container my-3">
-      <h1>Welcome to My Library</h1>
+      <h1>SCHOOL OF ENGINEERING & TECHNOLOGY</h1>
       <hr />
       <form id="mylibraryform">
-        <div class="form-group">
-          <label for="exampleInputEmail1">User Name</label>
+        <div class="form-group"  >
+          <label for="exampleInputEmail1">User Name </label>
           <input
             type="text"
             class="form-control"
             id="User-Name"
             aria-describedby="emailHelp"
+            oninput="this.value = this.value.toUpperCase()"
+            placeholder="Enter recipient name"
           />
           <small id="emailHelp" class="form-text text-muted"
-            >We'll never share your user name with anyone else.</small
+            ></small
           >
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Book Name</label>
-          <input type="text" class="form-control" id="Book-Name" />
+          <input type="text" class="form-control" placeholder="Enter book name and book reference ID" id="Book-Name" oninput="this.value = this.value.toUpperCase()" />
         </div>
         <div class="form-group">
-          <label for="bookType">Book Type</label>
+          <label for="exampleInputPassword2">ENROLLMENT_No</label>
+          <input type="text" class="form-control" id="ENROLLMENT_No" placeholder="Enter recipient enrollment number" oninput="this.value = this.value.toUpperCase()" />
+
+        </div>
+        <div class="form-group">
+          <label for="bookType">Department</label>
           <div class="check-boxes my-3 mx-5">
             <div class="form-check p-2">
               <input
@@ -112,16 +121,17 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-outline-dark">Add Book</button>
+        <button type="submit" class="btn btn-outline-dark">Save Details</button>
       </form>
       <table class="table table-dark my-3">
         <thead>
           <tr>
-            <th scope="col">Sl No.</th>
+            <th scope="col"> SNo.</th>
             <th scope="col">Date of issue</th>
-            <th scope="col">Reader</th>
+            <th scope="col">Enrollment No</th>
+            <th scope="col">Student Name</th>
             <th scope="col">Book Name</th>
-            <th scope="col">Genre</th>
+            <th scope="col">Department</th>
             <th scope="col"></th>
           </tr>
         </thead>
