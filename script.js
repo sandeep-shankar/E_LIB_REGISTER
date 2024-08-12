@@ -71,6 +71,114 @@ function showList() {
   new Display().add(listArray);
 }
 
+// Call showList when the page loads
+showList();
+
+function showList() {
+  let listItems = localStorage.getItem("listItems");
+  if (listItems == null) {
+    listArray = [];
+  } else {
+    listArray = JSON.parse(listItems);
+  }
+  new Display().add(listArray);
+}
+
+// Call showList when the page loads
+showList();
+
+function showList() {
+  let listItems = localStorage.getItem("listItems");
+  if (listItems == null) {
+    listArray = [];
+  } else {
+    listArray = JSON.parse(listItems);
+  }
+  new Display().add(listArray);
+}
+
+// Call showList when the page loads
+showList();
+
+function showList() {
+  let listItems = localStorage.getItem("listItems");
+  if (listItems == null) {
+    listArray = [];
+  } else {
+    listArray = JSON.parse(listItems);
+  }
+  new Display().add(listArray);
+}
+
+// Call showList when the page loads
+showList();
+
+function showList() {
+  let listItems = localStorage.getItem("listItems");
+  if (listItems == null) {
+    listArray = [];
+  } else {
+    listArray = JSON.parse(listItems);
+  }
+  new Display().add(listArray);
+}
+
+// Call showList when the page loads
+showList();
+
+function showList() {
+  let listItems = localStorage.getItem("listItems");
+  if (listItems == null) {
+    listArray = [];
+  } else {
+    listArray = JSON.parse(listItems);
+  }
+  new Display().add(listArray);
+}
+
+// Call showList when the page loads
+showList();
+
+function showList() {
+  let listItems = localStorage.getItem("listItems");
+  if (listItems == null) {
+    listArray = [];
+  } else {
+    listArray = JSON.parse(listItems);
+  }
+  new Display().add(listArray);
+}
+
+// Call showList when the page loads
+showList();
+
+function showList() {
+  let listItems = localStorage.getItem("listItems");
+  if (listItems == null) {
+    listArray = [];
+  } else {
+    listArray = JSON.parse(listItems);
+  }
+  new Display().add(listArray);
+}
+
+// Call showList when the page loads
+showList();
+
+function showList() {
+  let listItems = localStorage.getItem("listItems");
+  if (listItems == null) {
+    listArray = [];
+  } else {
+    listArray = JSON.parse(listItems);
+  }
+  new Display().add(listArray);
+}
+
+// Call showList when the page loads
+showList();
+
+
 function deleteItem(index) {
   let listItems = localStorage.getItem("listItems");
   if (listItems == null) {
@@ -94,29 +202,30 @@ function formSubmit(e) {
   let givenBookName = document.getElementById("Book-Name").value;
 
   let givenType;
-  let checkFiction = document.getElementById("Fiction");
-  let checkPrograming = document.getElementById("Programing");
-  let checkCooking = document.getElementById("Cooking");
+  let checkIT = document.getElementById("it");
+  let checkCSE = document.getElementById("cse");
+  let checkECE = document.getElementById("ece");
 
-  if (checkFiction.checked) {
-    givenType = checkFiction.value;
-  } else if (checkPrograming.checked) {
-    givenType = checkPrograming.value;
+  if (checkIT.checked) {
+    givenType = checkIT.value;
+  } else if (checkCSE.checked) {
+    givenType = checkCSE.value;
   } else {
-    givenType = checkCooking.value;
+    givenType = checkECE.value;
   }
 
   let o1 = new inputs(givenENROLLMENT_No, givenUserName, givenBookName, givenType);
 
   let displayObj = new Display();
 
+  let listItems = localStorage.getItem("listItems");
+  if (listItems == null) {
+    listArray = [];
+  } else {
+    listArray = JSON.parse(listItems);
+  }
+
   if (displayObj.validate(o1) && displayObj.checkIssue(listArray, o1) === 1) {
-    let listItems = localStorage.getItem("listItems");
-    if (listItems == null) {
-      listArray = [];
-    } else {
-      listArray = JSON.parse(listItems);
-    }
     listArray.push(o1);
     localStorage.setItem("listItems", JSON.stringify(listArray));
 
