@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ggu logo.webp">
+    <title>E-Library Register</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+        .login-container {
+            background-color: #ffffff;
+            
+            
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(110, 5, 5, 0.1);
+            margin: 100px auto;
+            max-width: 400px;
+        }
+        .login-container h2 {
+            margin-bottom: 1.5rem;
+            text-align: 900;
+        }
+
+        .main-container {
+            padding: 2rem;
+        }
+        #library-section{
+            background-image: url(./ggulib2.webp);
+            color: rgb(34, 209, 18); 
+            background-position: 10;
+            background-size: cover;
+            font-size: 1.4em;
+            width: 100%;
+            height: 100vh;
+        }
+
+
+
+
+
+    
+    </style>
+</head>
+<body>
+    <!-- Admin Login Section -->
+    <div class="login-container" id="login-section">
+        <h2>Admin Login</h2>
+        <form id="admin-login-form">
+            <div class="form-group">
+                <label for="admin-username">Username</label>
+                <input type="text" class="form-control" id="admin-username" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+                <label for="admin-password">Password</label>
+                <input type="password" class="form-control" id="admin-password" placeholder="Enter password">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            <div id="login-error" class="text-danger mt-2"></div>
+        </form>
+    </div>
+
+    <!-- Main E-Library Register Section -->
+    <div class="main-container" id="library-section" style="display: none;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">GURU GHASIDAS UNIVERSITY</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </nav>
+
+        <div id="alertuser"></div>
+
+        <div class="container my-3">
+            <h1>SCHOOL OF ENGINEERING & TECHNOLOGY</h1>
+            <hr />
+            <form id="mylibraryform">
+                <div class="form-group">
+                    <label for="User-Name">User Name</label>
+                    <input type="text" class="form-control" id="User-Name" oninput="this.value = this.value.toUpperCase()" placeholder="Enter recipient name">
+                </div>
+                <div class="form-group">
+                    <label for="Book-Name">Book Name</label>
+                    <input type="text" class="form-control" id="Book-Name" oninput="this.value = this.value.toUpperCase()" placeholder="Enter book name and book reference ID">
+                </div>
+                <div class="form-group">
+                    <label for="ENROLLMENT_No">ENROLLMENT_No</label>
+                    <input type="text" class="form-control" id="ENROLLMENT_No" oninput="this.value = this.value.toUpperCase()" placeholder="Enter recipient enrollment number">
+                </div>
+                <div class="form-group">
+                    <label for="Department">Department</label>
+                    <div class="check-boxes my-3 mx-5">
+                        <div class="form-check p-2">
+                            <input class="form-check-input" type="radio" name="check-box" id="I.T" value="I.T">
+                            <label class="form-check-label" for="I.T">I.T</label>
+                        </div>
+                        <div class="form-check p-2">
+                            <input class="form-check-input" type="radio" name="check-box" id="CSE" value="CSE">
+                            <label class="form-check-label" for="CSE">CSE</label>
+                        </div>
+                        <div class="form-check p-2">
+                            <input class="form-check-input" type="radio" name="check-box" id="ECE" value="ECE">
+                            <label class="form-check-label" for="ECE">ECE</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-outline-dark">Save Details</button>
+            </form>
+            <table class="table table-dark my-3">
+                <thead>
+                    <tr>
+                        <th scope="col">SNo.</th>
+                        <th scope="col">Date of issue</th>
+                        <th scope="col">Enrollment No</th>
+                        <th scope="col">Student Name</th>
+                        <th scope="col">Book Name</th>
+                        <th scope="col">Department</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
